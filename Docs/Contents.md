@@ -37,8 +37,8 @@
   - [Sprite groups](Graphics/SpriteGroups.md) x
   
 - Resources
-  - [Nopipeline](Resources/Nopipeline.md)
-  - [Adding resources](Resources/AddingResources)
+  - [Nopipeline](Resources/NoPipeline.md)
+  - [Adding resources](Resources/AddingResources.md)
   - [Resource Hub](Resources/ResourceHub.md)
   - [Resource Box](Resources/ResourceBox.md)
   - [Creating custom resource types](Resources/CreatingCustomResourceTypes.md) i
