@@ -25,11 +25,19 @@ namespace Monofoxe.Engine
 
 		internal static void Init()
 		{
-			try
+			var assets = new List<string>();
+			var contentFiles = Directory.GetFiles(Path.GetFullPath(ContentDir), "Content*");
+			foreach (var contentFile in contentFiles)
 			{
-				_assetPaths = GameMgr.Game.Content.Load<string[]>("Content");
+				try
+				{
+					var content = Path.GetFileNameWithoutExtension(contentFile);
+					assets.AddRange(GameMgr.Game.Content.Load<string[]>(content));
+				}
+				catch { continue; }
 			}
-			catch (Exception) { }
+			Array.Resize(ref _assetPaths, assets.Count);
+			assets.CopyTo(_assetPaths);
 		}
 
 
